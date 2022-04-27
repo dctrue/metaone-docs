@@ -2,9 +2,13 @@
 
 ## 1、服务接入地址
 
+- 测试环境：
+
+  https://test-data.metaone.gg/sb/
+  
 - 正式环境：
 
-  https://www.metaone.gg/sb/
+  https://data.metaone.gg/sb/
 
 ## 2、接口统一约束
 
