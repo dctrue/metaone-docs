@@ -14,7 +14,7 @@
 
 ### 2.1、统一请求数据结构
 
-#### 请求头（Request Headers）：
+#### 2.1.1、请求头（Request Headers）：
 
 - Accept-Language/lang：国际化语言【使用ISO标准的locale。不区分大小写，不区分横杠"-"与下划线"_"】
   - 英文：en或 en-US、en_uk等

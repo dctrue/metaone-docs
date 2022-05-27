@@ -12,7 +12,9 @@
 
 ## 2、接口
 
-#### 请求头（Request Headers）：
+### 2.1、统一请求数据结构
+
+#### 2.1.1、请求头（Request Headers）：
 
 - Accept-Language/lang：国际化语言【使用ISO标准的locale。不区分大小写，不区分横杠"-"与下划线"_"】
   - 英文：en或 en-US、en_uk等
@@ -45,9 +47,7 @@
   - 其他：请求失败后的错误描述
 - resultInfo.data：请求成功后的数据，注意，数据有可能为空
 
-#### 日期相关参数格式：
-
-
+#### 日期相关参数格式：yyyy-MM-dd
 
 ## 3、API接口：
 
