@@ -450,7 +450,7 @@ batchId=8586ba5031e973d98c686883b3a2151f&nonce=2a015a53d41548f5a6d7879b75a5fff3&
 
 - 业务流程图
 
-​          ![image-20220606163232132](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220606163232132.png)                     
+​                    ![](./pics/8.4.1.1 业务流程图.png)           
 
 - 对接代码(接口号：1.1)
 
@@ -480,7 +480,7 @@ uint8 _gameBonus,   // lender游戏币抽成百分比,Rent模式为0；Staking�
 
 - 业务流程图
 
-  ![image-20220606164028031](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220606164028031.png)
+  ![](./pics/8.4.1.2 业务流程图.png)
 
 - 对接代码(接口号：1.2)
 
@@ -506,7 +506,7 @@ uint8 _gameBonus,   // lender游戏币抽成百分比,Rent模式为0；Staking�
 
 - 业务流程图
 
-  ![image-20220606164243645](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220606164243645.png)
+  ![](./pics/8.4.1.3 业务流程图.png)
 
 - 对接代码(接口号：1.3)
 
@@ -543,7 +543,7 @@ uint8 _gameBonus,   // lender游戏币抽成百分比,Rent模式为0；Staking�
 
   
 
-- ![image-20220606164630107](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220606164630107.png)
+- ![](./pics/8.4.1.4 业务流程图.png)
 
 - 对接代码(接口号：1.4)
 
@@ -599,7 +599,7 @@ uint8 _gameBonus,   // lender游戏币抽成百分比,Rent模式为0；Staking�
 
   - 业务流程图
 
-    ![image-20220606165840283](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220606165840283.png)
+    ![](./pics/8.4.2.1 业务流程图.png)
 
   - 对接代码(接口号：1.6)
 
@@ -659,7 +659,7 @@ function removeManager(address manager) external;
 
 - 业务流程
 
-  ![image-20220606170255894](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20220606170255894.png)
+  ![](./pics/8.4.3.1 业务流程图.png)
 
 - 对接代码(接口号：1.8)
 
