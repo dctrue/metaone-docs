@@ -374,11 +374,11 @@ itemId | 是 | 道具ID/tokenId
 					"gameName": "游戏名称", 
 					"attributes" :[  //所有扩展字段会以如下格式放在attributes数组内
 						{
-							"attrName" : "字段的标题或名称", 
+							"attrCode" : "属性的code",  // 平台需要根据与游戏的约定，用attrCode做国际化
 							"attrValue" : "字符串格式的字段取值", //所有类型的值都统一转为字符串
 						},	
 						{
-							"attrName" : "字段的标题或名称", 
+							"attrCode" : "属性的code",   // 平台需要根据与游戏的约定，用attrCode做国际化
 							"attrValue" : "字符串格式的字段取值", //所有类型的值都统一转为字符串
 						},
 						...
@@ -390,7 +390,7 @@ itemId | 是 | 道具ID/tokenId
   ````
   
 #### 3.4.2 查询指定玩家（钱包ID）名下的道具：
-  
+
 - 功能说明：通过道具Id，查询道具信息。由于道具信息数据量可能偏大。建议选择合适的分页大小进行分页加载。返回结果中，itemId、itemImage和gameName都是必选字段
 
 - 请求方式：GET
@@ -465,7 +465,6 @@ pageSize | 是 | 分页大小，必须为正整数
       }
   }
   ````
-
 
 
 

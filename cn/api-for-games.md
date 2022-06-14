@@ -358,11 +358,11 @@ batchId=8586ba5031e973d98c686883b3a2151f&nonce=2a015a53d41548f5a6d7879b75a5fff3&
 	"gameName": "游戏名称", //这是必选字段
 	"attributes" :[  //所有可选字段以如下格式放在attributes内
 		{
-			"attrName" : "字段的标题或名称", 
+			"attrCode" : "属性的code", // 用code原因是因为需要国际化 
 			"attrValue" : "字符串格式的字段取值", //所有类型的值都统一转为字符串
 		},	
 		{
-			"attrName" : "字段的标题或名称", 
+			"attrName" : "属性的code", // 用code原因是因为需要国际化 
 			"attrValue" : "字符串格式的字段取值", //所有类型的值都统一转为字符串
 		},
 		...
@@ -385,11 +385,11 @@ batchId=8586ba5031e973d98c686883b3a2151f&nonce=2a015a53d41548f5a6d7879b75a5fff3&
 				"attrValue" : "Weapon1234", 
 			},	
 			{
-				"attrName" : "Talent Point", 
+				"attrName" : "TalentPoint", 
 				"attrValue" : "3", 
 			},
 			{
-				"attrName" : "Price In Game",
+				"attrName" : "PriceInGame",
 				"attrValue" : "1000 diamonds",
 			},
 			{
