@@ -334,7 +334,142 @@ lang | 否 | 语言，缺省值"en"英文，当前仅支持中文与英文
 
 含基于公会的数据数据查询和公会玩家关系同步相关流程的接口
 
-### 3.4 道具信息数据模块(待定)：
+### 3.4 道具信息数据模块：
 
-含道具列表、道具详情等相关部分
+#### 3.4.1 通过道具Id(tokenId）查询道具信息：
+
+- 功能说明：通过道具Id，查询道具信息。
+
+- 请求方式：GET
+
+- 请求地址：/metaoneData/queryGameItemById
+
+- 请求头：
+
+HeaderName | 是否必须 | HeaderValue说明
+------- | ------- | -------
+Authorization | 是 | 当前保存的token<br/>【token需要每日通过调用获取token接口获取并更新/保存起来】
+lang | 否 | 语言，缺省值"en"英文，当前仅支持中文与英文 
+
+- 请求参数：
+
+
+参数名 | 是否必须 |说明
+------- | ------- | -------
+itemId | 是 | 道具ID/tokenId
+
+
+
+- 正确时响应内容：
+
+  ````json
+  {
+      "stateCode": 1,
+      "resultInfo": {
+          "desc": "Success",
+          "data": {
+          	"ownerId": "道具拥有者的ID/钱包ID",
+          	"details": {
+					"itemImage": "https://xxxx/xxx.png", //道具配图url地址
+					"gameName": "游戏名称", 
+					"attributes" :[  //所有扩展字段会以如下格式放在attributes数组内
+						{
+							"attrName" : "字段的标题或名称", 
+							"attrValue" : "字符串格式的字段取值", //所有类型的值都统一转为字符串
+						},	
+						{
+							"attrName" : "字段的标题或名称", 
+							"attrValue" : "字符串格式的字段取值", //所有类型的值都统一转为字符串
+						},
+						...
+					]
+				},
+          }
+      }
+  }
+  ````
+  
+#### 3.4.2 查询指定玩家（钱包ID）名下的道具：
+  
+- 功能说明：通过道具Id，查询道具信息。由于道具信息数据量可能偏大。建议选择合适的分页大小进行分页加载。返回结果中，itemId、itemImage和gameName都是必选字段
+
+- 请求方式：GET
+
+- 请求地址：/metaoneData/listUserGameItems
+
+- 请求头：
+
+HeaderName | 是否必须 | HeaderValue说明
+------- | ------- | -------
+Authorization | 是 | 当前保存的token<br/>【token需要每日通过调用获取token接口获取并更新/保存起来】
+lang | 否 | 语言，缺省值"en"英文，当前仅支持中文与英文 
+
+- 请求参数：
+
+
+参数名 | 是否必须 |说明
+------- | ------- | -------
+userId | 是 | 玩家Id/钱包ID
+pageNum | 是 | 分页页码，第一页从0开始
+pageSize | 是 | 分页大小，必须为正整数
+
+
+- 正确时响应内容：
+
+  ````json
+  {
+      "stateCode": 1,
+      "resultInfo": {
+          "desc": "Success",
+          "data": {
+          	"totalCount": 23131, //该玩家名下的道具总数
+          	"itemCount": 20, //当前请求查询到的结果数量
+          	"items": [
+          		{
+		          	"itemId": "道具ID/tokenID",
+		          	"details": {
+						"itemImage": "https://xxxx/xxx.png", //道具配图url地址
+						"gameName": "游戏名称", 
+						"attributes" :[  //所有扩展字段会以如下格式放在attributes数组内
+							{
+								"attrName" : "字段的标题或名称", 
+								"attrValue" : "字符串格式的字段取值", //所有类型的值都统一转为字符串
+							},	
+							{
+								"attrName" : "字段的标题或名称", 
+								"attrValue" : "字符串格式的字段取值", //所有类型的值都统一转为字符串
+							},
+						]
+					},
+          		},
+          		{
+		          	"itemId": "道具ID/tokenID",
+		          	"details": {
+						"itemImage": "https://xxxx/xxx.png", //道具配图url地址
+						"gameName": "游戏名称", 
+						"attributes" :[  //所有扩展字段会以如下格式放在attributes数组内
+							{
+								"attrName" : "字段的标题或名称", 
+								"attrValue" : "字符串格式的字段取值", //所有类型的值都统一转为字符串
+							},	
+							{
+								"attrName" : "字段的标题或名称", 
+								"attrValue" : "字符串格式的字段取值", //所有类型的值都统一转为字符串
+							},
+						]
+					},
+          		},
+          		...
+          	]
+          }
+      }
+  }
+  ````
+
+
+
+
+
+
+
 

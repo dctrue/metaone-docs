@@ -354,20 +354,53 @@ batchId=8586ba5031e973d98c686883b3a2151f&nonce=2a015a53d41548f5a6d7879b75a5fff3&
 - d：表示details，当a="overwrite"时，必须提供完整的details属性：d内的具体字段如下：
 ```json
 {
-	"chain": "所归属的链",
-	"address": "合约地址",
-	"title": "道具的名称",
-	"attributes" : { //各种道具属性（具体字段待定，以下为举例）
-		"size": "Value Of size",
-		"courage": "Value Of courage",
-		"rarity": "Value Of rarity",
-		"wisdom": "Value Of wisdom",
-		"luck": "Value Of luck",
-		"race": "Value Of race",
-		"stealth": "Value Of stealth",
+	"itemImage": "https://xxxx/xxx.png", //这是必选字段
+	"gameName": "游戏名称", //这是必选字段
+	"attributes" :[  //所有可选字段以如下格式放在attributes内
+		{
+			"attrName" : "字段的标题或名称", 
+			"attrValue" : "字符串格式的字段取值", //所有类型的值都统一转为字符串
+		},	
+		{
+			"attrName" : "字段的标题或名称", 
+			"attrValue" : "字符串格式的字段取值", //所有类型的值都统一转为字符串
+		},
+		...
+	]
+}
+```
+
+以下举例：
+```json
+{
+	"u" : "玩家ID/钱包ID",
+	"i" : "NFT道具ID/tokenId",
+	"a" : "overwrite",
+	"d" : {
+		"itemImage": "https://xxxx/xxx.png",
+		"gameName": "游戏名称", 
+		"attributes" :[ 
+			{
+				"attrName" : "weapon", 
+				"attrValue" : "Weapon1234", 
+			},	
+			{
+				"attrName" : "Talent Point", 
+				"attrValue" : "3", 
+			},
+			{
+				"attrName" : "Price In Game",
+				"attrValue" : "1000 diamonds",
+			},
+			{
+				"attrName" : "Rarity Level",
+				"attrValue" : "SSR"
+			}
+		]
 	}
 }
 ```
+
 
 #### 类型4：游戏每日玩家活跃情况整体数据
 
@@ -1114,6 +1147,8 @@ uint _amount
 ## 文档更新日志
 
 - 初始编写 [2022-3-30]
+
+
 
 
 
