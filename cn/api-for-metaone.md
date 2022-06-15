@@ -371,7 +371,7 @@ itemId | 是 | 道具ID/tokenId
           	"ownerId": "道具拥有者的ID/钱包ID",
           	"details": {
 					"itemImage": "https://xxxx/xxx.png", //道具配图url地址
-					"gameName": "游戏名称", 
+					"gameId": "游戏id", 
 					"attributes" :[  //所有扩展字段会以如下格式放在attributes数组内
 						{
 							"attrCode" : "属性的code",  // 平台需要根据与游戏的约定，用attrCode做国际化
@@ -391,7 +391,7 @@ itemId | 是 | 道具ID/tokenId
   
 #### 3.4.2 查询指定玩家（钱包ID）名下的道具：
 
-- 功能说明：通过道具Id，查询道具信息。由于道具信息数据量可能偏大。建议选择合适的分页大小进行分页加载。返回结果中，itemId、itemImage和gameName都是必选字段
+- 功能说明：通过道具Id，查询道具信息。由于道具信息数据量可能偏大。建议选择合适的分页大小进行分页加载。返回结果中，itemId、itemImage和gameId都是必选字段
 
 - 请求方式：GET
 
@@ -429,7 +429,7 @@ pageSize | 是 | 分页大小，必须为正整数
 		          	"itemId": "道具ID/tokenID",
 		          	"details": {
 						"itemImage": "https://xxxx/xxx.png", //道具配图url地址
-						"gameName": "游戏名称", 
+						"gameId": "游戏Id", 
 						"attributes" :[  //所有扩展字段会以如下格式放在attributes数组内
 							{
 								"attrName" : "字段的标题或名称", 
@@ -446,7 +446,7 @@ pageSize | 是 | 分页大小，必须为正整数
 		          	"itemId": "道具ID/tokenID",
 		          	"details": {
 						"itemImage": "https://xxxx/xxx.png", //道具配图url地址
-						"gameName": "游戏名称", 
+						"gameId": "游戏ID", 
 						"attributes" :[  //所有扩展字段会以如下格式放在attributes数组内
 							{
 								"attrName" : "字段的标题或名称", 

@@ -355,14 +355,14 @@ batchId=8586ba5031e973d98c686883b3a2151f&nonce=2a015a53d41548f5a6d7879b75a5fff3&
 ```json
 {
 	"itemImage": "https://xxxx/xxx.png", //这是必选字段
-	"gameName": "游戏名称", //这是必选字段
+	"gameID": "游戏ID", //这是必选字段
 	"attributes" :[  //所有可选字段以如下格式放在attributes内
 		{
-			"attrCode" : "属性的code", // 用code原因是因为需要国际化 
+			"attrName" : "字段的标题或名称", 
 			"attrValue" : "字符串格式的字段取值", //所有类型的值都统一转为字符串
 		},	
 		{
-			"attrName" : "属性的code", // 用code原因是因为需要国际化 
+			"attrName" : "字段的标题或名称", 
 			"attrValue" : "字符串格式的字段取值", //所有类型的值都统一转为字符串
 		},
 		...
@@ -378,18 +378,18 @@ batchId=8586ba5031e973d98c686883b3a2151f&nonce=2a015a53d41548f5a6d7879b75a5fff3&
 	"a" : "overwrite",
 	"d" : {
 		"itemImage": "https://xxxx/xxx.png",
-		"gameName": "游戏名称", 
+		"gameID": "游戏ID", 
 		"attributes" :[ 
 			{
 				"attrName" : "weapon", 
 				"attrValue" : "Weapon1234", 
 			},	
 			{
-				"attrName" : "TalentPoint", 
+				"attrName" : "Talent Point", 
 				"attrValue" : "3", 
 			},
 			{
-				"attrName" : "PriceInGame",
+				"attrName" : "Price In Game",
 				"attrValue" : "1000 diamonds",
 			},
 			{
